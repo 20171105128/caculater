@@ -207,6 +207,35 @@ class ViewController: UIViewController {
         caculaterDisplay.text = caculaterDisplay.text!+"."
     }
     
+    
+    @IBAction func Buttonsinn(_ sender: Any) {
+        temp =
+            Double(caculaterDisplay.text!)!
+        flag = 7
+        calFlag = 2;
+    }
+    
+    @IBAction func Buttoncoss(_ sender: Any) {
+        temp =
+            Double(caculaterDisplay.text!)!
+        flag = 8
+        calFlag = 2;
+    }
+    
+    
+    @IBAction func Buttontann(_ sender: Any) {
+        temp =
+            Double(caculaterDisplay.text!)!
+        flag = 9
+        calFlag = 2;
+    }
+    
+    @IBAction func Buttonlogg(_ sender: Any) {
+        temp =
+            Double(caculaterDisplay.text!)!
+        flag = 10
+        calFlag = 2;
+    }
     @IBAction func caculater(_ sender: Any) {
         if(flag == 1)
         {
@@ -234,22 +263,45 @@ class ViewController: UIViewController {
         }
         if(flag == 5)
         {
-            var sum10 :Double = 0
-            sum10 = 0.01 * (temp)
-            caculaterDisplay.text = "\(sum10)"
+            var sum4 :Double = 0
+            sum4 = 0.01 * (temp)
+            caculaterDisplay.text = "\(sum4)"
         }
         if(flag == 6)
         {
-            var sum4 :Double = 0
-            sum4 = pow(temp,Double(caculaterDisplay.text!)!)
-            caculaterDisplay.text = "\(sum4)"
+            var sum5 :Double = 0
+            sum5 = pow(temp,Double(caculaterDisplay.text!)!)
+            caculaterDisplay.text = "\(sum5)"
+        }
+        if(flag == 7)
+        {
+            var sum6 :Double = 0
+            sum6 = sin(temp)
+            caculaterDisplay.text = "\(sum6)"
+        }
+        if(flag == 8)
+        {
+            var sum7 :Double = 0
+            sum7 = cos(temp)
+            caculaterDisplay.text = "\(sum7)"
+        }
+        if(flag == 9)
+        {
+            var sum8 :Double = 0
+            sum8 = tan(temp)
+            caculaterDisplay.text = "\(sum8)"
+        }
+        if(flag == 10)
+        {
+            var sum9 :Double = 0
+            sum9 = log(temp)
+            caculaterDisplay.text = "\(sum9)"
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
-
 
 }
-
+}
